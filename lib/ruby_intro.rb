@@ -16,14 +16,11 @@ def max_2_sum(arr)
     return arr[0]
   
   else
-    # Get largest element in arr
-    first = arr.max() 
-
-    # Delete the largest element in the arr
-    arr.delete_at(arr.index(arr.max()))
+    # Get array of 2 largest elements in arr using Array.max(2)
+    first = arr.max(2) 
 
     # Return first largest + next largest element
-    return (first + arr.max())
+    return (first[0] + first[1])
   end
 
 end
